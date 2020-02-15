@@ -30,6 +30,8 @@ report_deploymentconfig(){
 
 	containers=( $(oc get --export -o json deploymentconfigs/libretti-aperture-associazioneruoli | jq '.spec.template.spec.containers[] .name') )
 
+	for x in ${#containers[@]};do echo ${containers[$x]};done
+
 	 echo "Mi ritornano 2 valori da qui? ${#containers[@]}, VALORE 1: ${containers[0]} ---- VALORE2: ${containers[1]}"
 	if [ ${#dc[@]} -gt 0 ]
 		then
