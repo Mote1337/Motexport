@@ -11,8 +11,8 @@ else
 	cd $project
 fi
 
-#. classi/buildconfigs.sh
+#. ../classi/buildconfigs.sh
 # buildconfigs $project
 
-. classi/deploymentconfigs.sh
+. ../classi/deploymentconfigs.sh
 report_deploymentconfig $project
