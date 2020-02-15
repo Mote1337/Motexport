@@ -1,3 +1,8 @@
+#!/bin/bash
+
+## Motexport ( https://github.com/Mote1337/Motexport )
+## Realizzato da Paolo Nicolosi ( https://github.com/Mote1337 ) in collaborazione con Silvio D'alessio
+
 #Storage Classes
 sc=( $(oc get storageclasses -o name -n $project) )
 

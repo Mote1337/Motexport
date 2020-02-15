@@ -1,3 +1,8 @@
+#!/bin/bash
+
+## Motexport ( https://github.com/Mote1337/Motexport )
+## Realizzato da Paolo Nicolosi ( https://github.com/Mote1337 ) in collaborazione con Silvio D'alessio
+
 #Secrets
 secrets=( $(oc get secrets -o name -n $project| grep -v builder | grep -v default | grep -v deployer | grep -v sa | grep -v token | grep -v dockercfg | grep -v glusterblk ) )
 
