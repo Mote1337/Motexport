@@ -1,0 +1,46 @@
+all
+* buildconfigs (aka 'bc')
+builds
+certificatesigningrequests (aka 'csr')
+clusterrolebindings
+clusterroles
+componentstatuses (aka 'cs')
+* configmaps (aka 'cm')
+controllerrevisions
+cronjobs
+customresourcedefinition (aka 'crd')
+daemonsets (aka 'ds')
+deployments (aka 'deploy')
+* deploymentconfigs (aka 'dc')
+endpoints (aka 'ep')
+events (aka 'ev')
+horizontalpodautoscalers (aka 'hpa')
+imagestreamimages (aka 'isimage')
+imagestreams (aka 'is')
+imagestreamtags (aka 'istag')
+ingresses (aka 'ing')
+groups
+jobs
+limitranges (aka 'limits')
+namespaces (aka 'ns')
+networkpolicies (aka 'netpol')
+nodes (aka 'no')
+persistentvolumeclaims (aka 'pvc')
+persistentvolumes (aka 'pv')
+poddisruptionbudgets (aka 'pdb')
+podpreset
+pods (aka 'po')
+podsecuritypolicies (aka 'psp')
+podtemplates
+projects
+replicasets (aka 'rs')
+replicationcontrollers (aka 'rc')
+resourcequotas (aka 'quota')
+rolebindings
+roles
+* routes
+* secrets
+* serviceaccounts (aka 'sa')
+* services (aka 'svc')
+* statefulsets (aka 'sts')
+storageclasses (aka 'sc')
