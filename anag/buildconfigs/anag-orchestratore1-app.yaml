@@ -1,0 +1,39 @@
+apiVersion: build.openshift.io/v1
+kind: BuildConfig
+metadata:
+  creationTimestamp: null
+  labels:
+    build: anag-orchestratore1-app
+  name: anag-orchestratore1-app
+  selfLink: /apis/build.openshift.io/v1/namespaces/anag/buildconfigs/anag-orchestratore1-app
+spec:
+  failedBuildsHistoryLimit: 5
+  nodeSelector: null
+  output:
+    pushSecret:
+      name: nexus-credential
+    to:
+      kind: DockerImage
+      name: sdpsvalmbf.rete.testposte:5000/anag-orchestratore1-app:1.1.3-SNAPSHOT
+  postCommit: {}
+  resources: {}
+  runPolicy: Serial
+  source:
+    binary: {}
+    type: Binary
+  strategy:
+    sourceStrategy:
+      from:
+        kind: DockerImage
+        name: sdpsvalmbf.rete.testposte:5000/openshift/openjdk18-openshift
+    type: Source
+  successfulBuildsHistoryLimit: 5
+  triggers:
+  - github:
+      secret: fZBor1fnOXY4Mk1v0ERY
+    type: GitHub
+  - generic:
+      secret: VaTYBdtOH26PSanflHZz
+    type: Generic
+status:
+  lastVersion: 46

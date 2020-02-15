@@ -1,0 +1,42 @@
+apiVersion: build.openshift.io/v1
+kind: BuildConfig
+metadata:
+  annotations:
+    kubectl.kubernetes.io/last-applied-configuration: |
+      {"apiVersion":"build.openshift.io/v1","kind":"BuildConfig","metadata":{"annotations":{},"creationTimestamp":null,"labels":{"build":"anag-apertura-collegamento-app"},"name":"anag-apertura-collegamento-app","namespace":"anag","selfLink":"/apis/build.openshift.io/v1/namespaces/anag/buildconfigs/anag-apertura-collegamento-app"},"spec":{"failedBuildsHistoryLimit":5,"nodeSelector":null,"output":{"pushSecret":{"name":"nexus-credential"},"to":{"kind":"DockerImage","name":"sdpsvalmbf.rete.testposte:5000/anag-apertura-collegamento-app:1.1.1-SNAPSHOT"}},"postCommit":{},"resources":{},"runPolicy":"Serial","source":{"binary":{},"type":"Binary"},"strategy":{"sourceStrategy":{"from":{"kind":"DockerImage","name":"sdpsvalmbf.rete.testposte:5000/openshift/openjdk18-openshift"}},"type":"Source"},"successfulBuildsHistoryLimit":5,"triggers":[{"github":{"secret":"fZBor1fnOXY4Mk1v0ERY"},"type":"GitHub"},{"generic":{"secret":"VaTYBdtOH26PSanflHZz"},"type":"Generic"}]},"status":{"lastVersion":51}}
+  creationTimestamp: null
+  labels:
+    build: anag-apertura-collegamento-app
+  name: anag-apertura-collegamento-app
+  selfLink: /apis/build.openshift.io/v1/namespaces/anag/buildconfigs/anag-apertura-collegamento-app
+spec:
+  failedBuildsHistoryLimit: 5
+  nodeSelector: null
+  output:
+    pushSecret:
+      name: nexus-credential
+    to:
+      kind: DockerImage
+      name: sdpsvalmbf.rete.testposte:5000/anag-apertura-collegamento-app:1.1.1-SNAPSHOT
+  postCommit: {}
+  resources: {}
+  runPolicy: Serial
+  source:
+    binary: {}
+    type: Binary
+  strategy:
+    sourceStrategy:
+      from:
+        kind: DockerImage
+        name: sdpsvalmbf.rete.testposte:5000/openshift/openjdk18-openshift
+    type: Source
+  successfulBuildsHistoryLimit: 5
+  triggers:
+  - github:
+      secret: fZBor1fnOXY4Mk1v0ERY
+    type: GitHub
+  - generic:
+      secret: VaTYBdtOH26PSanflHZz
+    type: Generic
+status:
+  lastVersion: 51
