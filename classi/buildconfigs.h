@@ -1,6 +1,7 @@
+#!/bin/bash
 #Build Config
 
-buildconfig(){
+buildconfigs(){
 bc=( $(oc get buildconfigs -o name -n $1) )
 
 if [ ${#bc[@]} -gt 0 ]

@@ -11,6 +11,6 @@ else
 	cd $project
 fi
 
-. classi/buildconfigs.sh
+. ../classi/buildconfigs.h
 
 buildconfigs $project
