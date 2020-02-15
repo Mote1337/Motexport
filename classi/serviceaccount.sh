@@ -1,7 +1,7 @@
 #!/bin/bash
 
 ## Motexport ( https://github.com/Mote1337/Motexport )
-## Realizzato da Paolo Nicolosi ( https://github.com/Mote1337 ) in collaborazione con Silvio D'alessio
+## Realizzato da Paolo Nicolosi ( https://github.com/Mote1337 ) in collaborazione con Silvio D'Alessio
 
 #Service Account
 sa=( $(oc get serviceaccounts -o name -n $project | grep -v builder | grep -v default | grep -v deployer ) )

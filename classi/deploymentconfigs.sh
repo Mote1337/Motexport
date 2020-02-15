@@ -1,7 +1,7 @@
 #!/bin/bash
 
 ## Motexport ( https://github.com/Mote1337/Motexport )
-## Realizzato da Paolo Nicolosi ( https://github.com/Mote1337 ) in collaborazione con Silvio D'alessio
+## Realizzato da Paolo Nicolosi ( https://github.com/Mote1337 ) in collaborazione con Silvio D'Alessio
 
 #Deployment Config
 
@@ -28,6 +28,9 @@ fi
 report_deploymentconfig(){
 	dc=( $(oc get deploymentconfigs -o name -n $1) )
 
+	containers=( $(oc get --export -o json deploymentconfigs/libretti-aperture-associazioneruoli | jq '.spec.template.spec.containers[] .name') )
+
+	 echo "Mi ritornano 2 valori da qui? ${#containers[@]}"
 	if [ ${#dc[@]} -gt 0 ]
 		then
 		{
