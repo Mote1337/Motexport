@@ -32,6 +32,9 @@ report_deploymentconfig(){
 		then
 		{
 			echo "Esistono [${#dc[@]}] Deployment Config in $1"
+			# Ciclo for per leggere il DC, quanti Container i Limit e Requests
+			n=0
+			for i in $(oc get deploymentconfigs -o name -n $1);do let n=$n+1; echo "Il [$n] Deployment Config si chiama $i"; echo "vado a capo?";done
 		}
 		else
 		{
