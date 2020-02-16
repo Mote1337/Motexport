@@ -1,12 +1,12 @@
 #!/bin/bash
 
 
-NAMESPACE=frontendlibretti
+NAMESPACE=XXXX
 
 
 dc=( $(oc get deploymentconfigs -o name -n $NAMESPACE) )
 
-containers=( $(oc get --export -o json deploymentconfigs/libretti-aperture-associazioneruoli | jq '.spec.template.spec.containers[] .name') )
+containers=( $(oc get --export -o json XXXXX | jq '.spec.template.spec.containers[] .name') )
 
 
 prova=( $(for i in ${dc[@]};do oc get --export -o json $i | jq '.spec.template.spec.containers[] .name';done) )
