@@ -1,8 +1,8 @@
-TOKEN=0l6X5sdBvK3Pwo0Q1-kHy53ROTVqBVeNQUnJ3vXPR_M
-ENDPOINT=master.svil2.ocprm.testposte
+TOKEN=xxxxxxxxx
+ENDPOINT=xxxxxxxxxx
 PORT=8443
-NAMESPACE=frontendlibretti
-NOME_DC_1=libretti-aperture-associazioneruoli
+NAMESPACE=xxxxxxxxxxx
+NOME_DC_1=xxxxxxxxx
 
 curl -k \
     -H "Authorization: Bearer $TOKEN" \
