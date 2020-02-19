@@ -42,14 +42,3 @@ do
     conta_container=0
     let conta_dc=$conta_dc+1
 done
-
-
-
-
-
-
-
-
-
-
-
