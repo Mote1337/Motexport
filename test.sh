@@ -1,25 +1,16 @@
 #!/bin/bash
 
-
-NAMESPACE=XXXX
-
+NAMESPACE=$1
 
 dc=( $(oc get deploymentconfigs -o name -n $NAMESPACE) )
 
-#prova=( $(for i in ${dc[@]};do oc get --export -o json $i | jq '.spec.template.spec.containers[] .name';done) )
-
-
-#echo "Numero dei dc ${#dc[@]}"
-#echo "${dc[@]}"
-#echo "Numero dei containers all'interno di tutti i dc ${#prova[@]}"
-
 conta_dc=0
 conta_container=0
+
 for i in ${dc[@]};
 do
     echo "[DEPLOYMENT CONFIG] : ${dc[$conta_dc]} ";
 
-#    containers=( $(oc get --export -o json $i | jq '.spec.template.spec.containers[]') )
     numero_container=( $(oc get --export -o json $i | jq '.spec.template.spec.containers[] .name') );
 
     for y in ${numero_container[@]};
