@@ -19,7 +19,7 @@ for i in ${dc[@]};
 do
     echo "[DEPLOYMENT CONFIG] : ${dc[$conta_dc]} ";
 
-    containers=( $(oc get --export -o json $i | jq '.spec.template.spec.containers[]') )
+#    containers=( $(oc get --export -o json $i | jq '.spec.template.spec.containers[]') )
     numero_container=( $(oc get --export -o json $i | jq '.spec.template.spec.containers[] .name') );
 
     for y in ${numero_container[@]};
